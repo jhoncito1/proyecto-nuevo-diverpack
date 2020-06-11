@@ -478,11 +478,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="row">
                     <div class="col-6 col-sm-6">
                       <label required for="">rol</label>
-                      <input type="number" id="rol" name="rol" class="form-control">
+                        <select id="inputState" name="tipo" class="form-control">
+                            <option selected>Seleccione</option>
+                            <?php foreach (roles::get_all() as $result) { ?>
+                                <option value="<?php echo $result->id_rol ?>">
+                                    <?php echo ucwords( $result->nombre_rol);?><br>
+                                </option>
+                            <?php } ?>
+
+                        </select>
                     </div>
                     <div class="col-6 col-sm-6">
                       <label required for="">Estado</label>
-                      <input type="number" id="estado" name="estado" class="form-control">
+                        <select id="inputState" name="tipo" class="form-control">
+                            <option selected>Seleccione</option>
+                            <?php foreach (roles::get_all() as $result) { ?>
+                                <option value="<?php echo $result->id_tipodoc ?>">
+                                    <?php echo ucwords( $result->nombre_tipo_doc);?><br>
+                                </option>
+                            <?php } ?>
+
+                        </select>
                     </div>
                   </div>
                 </div>
