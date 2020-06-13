@@ -21,6 +21,7 @@ class usuariosController extends usuarios
             $_POST['direccion'],
             // $_POST['imagen'],
             $_POST['email'],
+
             $_POST['password'],
             $_POST['telefono'],
             $_POST['rol'],

@@ -492,9 +492,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <label required for="">Estado</label>
                         <select id="inputState" name="tipo" class="form-control">
                             <option selected>Seleccione</option>
-                            <?php foreach (roles::get_all() as $result) { ?>
-                                <option value="<?php echo $result->id_tipodoc ?>">
-                                    <?php echo ucwords( $result->nombre_tipo_doc);?><br>
+                            <?php foreach (usuarios::get_all() as $result) { ?>
+                                <option value="<?php echo $result->estado ?>">
+                                    <?php echo ucwords( $result->estado);?><br>
                                 </option>
                             <?php } ?>
 

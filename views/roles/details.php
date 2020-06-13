@@ -1,14 +1,14 @@
-<table >
+<table class="table table-bordered table-striped" >
     <tr>
-        <td>nombre</td>
-        <td><?php echo $rol->nombre_rol ?></td>
+        <td>ID: </td>
+        <td><?php echo $rol->id_rol ?></td>
     </tr>
     <tr>
-        <td>nombre</td>
-        <td><?php echo $rol->nombre ?></td>
+        <td>NOMBRE: </td>
+        <td><?php echo $rol->nombre_rol?></td>
     </tr>
     <tr>
-        <td>nombre</td>
-        <td><?php echo $rol->nombre ?></td>
+        <td>DESCRIPCION: </td>
+        <td><?php echo $rol->descripcion ?></td>
     </tr>
 </table>

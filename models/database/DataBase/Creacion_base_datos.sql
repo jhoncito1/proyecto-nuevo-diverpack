@@ -10,6 +10,7 @@ create table tipo_documento
 
 create table usuario
 (
+	id_user  int primary key auto_increment,
     numero_documento varchar(25),
     fk_id_tipodoc VARCHAR(10),
     primer_nombre varchar(25) not null,
@@ -24,6 +25,7 @@ create table usuario
     contraseña VARCHAR(15) not null,
     telefono bigint not null,
     fk_id_rol int,
+    estado int,
     fk_id_producto int
 );
 
@@ -42,8 +44,7 @@ create table tipo_producto
     tamaño varchar(30),
     descripcion varchar(100) not null,
     precio float not null,
-    fk_id_numero_documento varchar (25),
-    fk2_id_tipodoc varchar (10)
+    fk_id_user int
     );
    
     
@@ -80,7 +81,7 @@ create table factura
     fecha datetime not null,
 	fk_id_tpago int,
     fk2_id_producto int,
-    fk_numero_documento varchar(25)
+    fk_id_user int
 );
 
 
@@ -168,18 +169,18 @@ create table servidor_correo
 -- se definen llaves primarias de tipo_documento y usuario, tambien foranea usuario -tipo_documento
 ALTER TABLE tipo_documento ADD primary key (id_tipodoc);
 ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_tipodoc)REFERENCES tipo_documento(id_tipodoc);
-ALTER TABLE usuario ADD primary key (numero_documento, fk_id_tipodoc);
+-- ALTER TABLE usuario ADD primary key (numero_documento, fk_id_tipodoc);
 
 -- rol definen las  llaves primaria y foranea de la tabla 
 -- ALTER TABLE rol ADD primary key (id_rol);
 ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_rol)REFERENCES rol(id_rol);
 
 --  - tipo_producto   define las  llaves  foraneas de la tabla 
-alter table tipo_producto  add constraint foreign key (fk_id_numero_documento,fk2_id_tipodoc) references usuario(numero_documento,fk_id_tipodoc );
+alter table tipo_producto  add constraint foreign key (fk_id_user) references usuario(id_user);
 
 --  - factura - tipo producto  define las  llaves  foraneas de la tabla 
 alter table factura add constraint foreign key (fk2_id_producto) references tipo_producto(id_producto);
-alter table factura add constraint foreign key (fk_numero_documento) references usuario (numero_documento);
+alter table factura add constraint foreign key (fk_id_user) references usuario (id_user);
 
 --  - servicio - tipo producto   define las  llaves  foraneas de la tabla 
 alter table servicio add constraint foreign key (fk_id_producto) references tipo_producto(id_producto);

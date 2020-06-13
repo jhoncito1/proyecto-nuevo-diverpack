@@ -28,7 +28,7 @@ require_once "views/home/menu.php"
                                     <input type="password" name="password" placeholder="contraseña" class="form-control">
                                 </div>
                                 <div class="footer">
-                                    <button class="btn btn-primary type=" submit">Guardar</button>
+                                    <button class="btn btn-primary type=" submit">Enviar</button>
                                 </div>
                         </form>
 
