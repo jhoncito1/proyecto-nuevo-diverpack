@@ -25,6 +25,12 @@ class homeController extends home{
     public function home(){
         require_once ('views/home/acercade.php');
     }
+    public function servicios(){
+        require_once ('views/home/servicios.php');
+    }
+    public function nuestraempresa(){
+        require_once ('views/home/nuestraempresa.php');
+    }
 
 }
 
