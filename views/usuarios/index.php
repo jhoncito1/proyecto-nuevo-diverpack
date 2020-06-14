@@ -137,11 +137,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
           </div>
         </li>
-        <li class="nav-item">
-          <?php echo $_SESSION['USER']->primer_nombre?>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i class="fas fa-th-large"></i></a>
+        </li>
+        <li class="nav-item">
+          <?php echo $_SESSION['USER']->primer_nombre. " "?>
+          <?php echo $_SESSION['USER']->primer_apellido?>
         </li>
       </ul>
     </nav>
@@ -477,8 +479,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="col-sm-12">
                   <div class="row">
                     <div class="col-6 col-sm-6">
-                      <label required for="">rol</label>
-                        <select id="inputState" name="tipo" class="form-control">
+                      <label required for="rol">rol</label>
+                        <select id="inputState" name="rol" class="form-control">
                             <option selected>Seleccione</option>
                             <?php foreach (roles::get_all() as $result) { ?>
                                 <option value="<?php echo $result->id_rol ?>">
@@ -490,13 +492,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                     <div class="col-6 col-sm-6">
                       <label required for="">Estado</label>
-                        <select id="inputState" name="tipo" class="form-control">
+                        <select id="inputState" name="estado" class="form-control">
                             <option selected>Seleccione</option>
-                            <?php foreach (usuarios::get_all() as $result) { ?>
-                                <option value="<?php echo $result->estado ?>">
-                                    <?php echo ucwords( $result->estado);?><br>
+                          
+                                <option value="1">
+                                    Activo
                                 </option>
-                            <?php } ?>
+                                 <option value="0">
+                                    Inactivo
+                                </option>
 
                         </select>
                     </div>

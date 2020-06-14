@@ -41,13 +41,13 @@ require_once "menu.php"
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <a class="carousel-item active" href="http://google.com" target="_blank">
           <img src="assets/img/649508_1.jpg" href="https://es-la.facebook.com" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h1>DiverPark.com</h1>
             <p>Agencia de parques de diversión</p>
           </div>
-        </div>
+</a>
         <div class="carousel-item">
           <img src="assets/img/1557869448_370614_1557869606_noticia_normal.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
