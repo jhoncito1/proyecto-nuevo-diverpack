@@ -1,8 +1,8 @@
 <?php
 class usuariosController extends usuarios
 {
-    public function index()
-    {
+    public function index(){
+        security::validate();
         require_once('views/usuarios/index.php');
     }
 

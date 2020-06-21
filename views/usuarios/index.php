@@ -524,7 +524,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
-    <!-- Modal editar-->--------------------------------------------------------------------------------------------------------------------------------
+    <!-- Modal editar-->
     <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

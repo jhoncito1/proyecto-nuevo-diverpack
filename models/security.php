@@ -1,5 +1,5 @@
 <?php
-class security extends DB
+class security
 {
 //    public function get_email($email){
 //     try {
@@ -11,5 +11,10 @@ class security extends DB
 //         die($e->getMessage());
 //     }
 //    }
+public function validate(){
+    if (empty($_SESSION['USER'])) {
+        header("location:?security&method=login");
+    }
+}
    
 }

@@ -15,11 +15,18 @@ class securityController extends security
         if ($usuario->password==$_POST['password']) {
             
             $_SESSION['USER']=$usuario;
-            header("location:?clase=usuarios&method=index");
+            header("location:?clase=admin&method=index");
+
         }
         else {
             header("location:?clase=security&method=login");
         }
         var_dump($usuario);
+    }
+    public function destroy(){
+        unset($_SESSION['USER']);
+        session_destroy();
+        header("location:?clase=security&method=login");
+
     }
 }
