@@ -3,7 +3,22 @@ class tdebitoController extends tdebito
 {
     public function index()
     {
+
+        /*
+         header, navbar, sidebar-left
+       */
+        require_once('views/layouts/admin/components/header.php');
+        require_once('views/layouts/admin/components/navbar.php');
+        require_once('views/layouts/admin/components/sidebar-left.php');
+        /*
+        content
+        */
         require_once('views/tdebito/index.php');
+        /*
+        sidebar-right, footer
+        */
+        require_once("views/layouts/admin/components/sidebar-right.php");
+        require_once("views/layouts/admin/components/footer.php");
     }
 
     
