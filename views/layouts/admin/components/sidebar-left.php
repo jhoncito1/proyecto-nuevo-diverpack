@@ -75,6 +75,12 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
+              <li class="nav-item">
+                  <a href="?clase=tdocumento&method=index" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tipo documento</p>
+                  </a>
+                </li>
                 <li class="nav-item">
                   <a href="?clase=roles&method=index" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
